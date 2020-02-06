@@ -1,0 +1,105 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<title>Our Love Story</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<style type="text/css">
+		@font-face {
+			font-family: digit;
+			src: url('digital-7_mono.ttf') format("truetype");
+		}
+        .heart{
+            color: red;
+        }
+
+	</style>
+	<link href="css/default.css" type="text/css" rel="stylesheet">
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/garden.js"></script>
+    <script type="text/javascript" src="js/functions.js"></script>
+</head>
+
+<body>
+	<div id="mainDiv">
+		<div id="content">
+			<div id="code">
+
+				亲爱的巫大美女：<br />
+				<span class="space"/><span class="space"/>七夕快乐!<br />
+				<span class="space"/><span class="space"/>（づ￣3￣）づ╭<span class="heart">❤</span>～爱你</span><br />
+				<br />
+				<span class="comments">距离上一次分别已经整整过去了三个月，好想好想你了(ಥ_ಥ)</span><br />              
+				<span class="comments">七夕将至，心中也想着那牛郎织女神话般的鹊桥相会(≧∇≦)/</span><br />				
+				<span class="comments">想要变成那窗外的风，心携眷恋与思念，撒欢了地飘到你的身边，只要见你，我怎么都愿意。</span><br />
+				<span class="comments">想要回去牵你的手，走在大街小巷里，徜徉在幸福里.</span><br />
+                <span class="comments">想要回去拥抱你，感受你的温度，痴醉在你的怀里.</span><br />
+				<br />
+				
+
+				你想知道的 ╭(≧∇≦)づ ：<br />
+				<span class="placeholder"/>我喜欢你活泼随性、落落大方的样子，也喜欢你小鸟依人、温情脉脉的样子；<br />				
+				<span class="placeholder"/>喜欢与你默默对视(´•ω•)ノ"(´•ω•`)，缠绵相依，听你耳语。<br />
+				<span class="placeholder"/>喜欢你的笑，你的美，你的温柔与善良；<br />
+				<span class="placeholder"/>嗯，对的，你那么美，笑起来的时候也更加楚楚动人，尤令我心动不已.<br />
+				<span class="placeholder"/>还有，你身上的无时无刻都在焕发的生活热情<br />
+				<br />
+
+				<span class="placeholder"/>我知道惹到你了你会生气，会难过，所以，我也想尽力地不让你生气，不让你难过。对你温柔以待，我愿意。<br />
+				
+				<span class="placeholder"/>当你开始“计较、记仇”，我可能内心在窃喜，我也乐意，因为我知道，你是爱我的，所以你才会这般地牵肠挂肚。<br />
+				<span class="placeholder"/>当你感到委屈难过，我会变得不知所措，以至于我脑子里只想着要更加不顾一切地去爱你疼你。<br />
+				<br />
+				<span class="comments">时光清浅，这是很好，很长的一生，故事里，亲爱的你，如六月的风，七月的雨，是盛夏白瓷，梅子汤甜。值得我奉献一生去爱，竭尽所能去守护。</span><br />
+				<span class="comments">我们的爱 <span class="heart">❤</span> 路远情长......</span><br />
+				～(￣▽￣～)~<br />
+
+			</div>
+			<div id="loveHeart">
+				<canvas id="garden"></canvas>
+				<div id="words">
+					<div id="messages">
+						亲爱的巫大美女，我们已经走过了...
+						<div id="elapseClock"></div>
+					</div>
+					<div id="loveu">
+						我好想你.(ɔˆ ³(ˆ⌣ˆc)<br/>
+						<div class="signature">-- 爱你的范大公子</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="copyright">
+            <a href="main.html"><img src="file/love.png" style="width:50px"></a><br />
+			(๑′ᴗ‵๑)Ｉ Lᵒᵛᵉᵧₒᵤ<span class="heart">❤</span> .<br />
+			想要借你一生，装饰我猗郁年华
+	</div>
+	<script type="text/javascript">
+		var offsetX = $("#loveHeart").width() / 2;
+		var offsetY = $("#loveHeart").height() / 2 - 55;
+		var together = '2019/02/12 09:00:00';
+		
+		if (!document.createElement('canvas').getContext) {
+			var msg = document.createElement("div");
+			msg.id = "errorMsg";
+			msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
+			document.body.appendChild(msg);
+			$("#code").css("display", "none")
+			$("#copyright").css("position", "absolute");
+			$("#copyright").css("bottom", "10px");
+		    document.execCommand("stop");
+		} else {
+			setTimeout(function () {
+				startHeartAnimation();
+			}, 500);
+
+			timeElapse(together);
+			setInterval(function () {
+				timeElapse(together);
+			}, 500);
+
+			adjustCodePosition();
+			$("#code").typewriter();
+		}
+	</script>
+</body>
+</html>
