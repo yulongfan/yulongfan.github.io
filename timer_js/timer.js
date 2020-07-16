@@ -59,7 +59,8 @@ function getHeartPoint(c){var b=c/Math.PI;var a=19.5*(16*Math.pow(Math.sin(b),3)
 								if(b<10){b="0"+b}f=f%3600;
 								var d=Math.floor(f/60);
 								if(d<10){d="0"+d}f=f%60;
-								if(f<10){f="0"+f}var a='<span class="digit">'+g+'</span> 天 <span class="digit">'+b+'</span> 时 <span class="digit">'+d+'</span> 分';
+								// if(f<10){f="0"+f}var a='<span class="digit">'+g+'</span> 天 <span class="digit">'+b+'</span> 时 <span class="digit">'+d+'</span> 分';
+								if(f<10){f="0"+f}var a='<span class="digit">'+g+'</span> Days';
 								$("#elapseClock").html(a)}
 								function showMessages(){adjustWordsPosition();
 									$("#messages").fadeIn(2000,function(){showLoveU()})}
